@@ -1,0 +1,18 @@
+.gold-gradient-text {
+    background: linear-gradient(135deg, #FFF099 0%, #D4AF37 50%, #997A15 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gold-gradient-bg {
+    background: linear-gradient(135deg, #E5C158 0%, #D4AF37 50%, #A37F19 100%);
+}
+.glass-card {
+    background: rgba(20, 20, 24, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+}
+.glass-card-hover:hover {
+    border-color: rgba(212, 175, 55, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.25);
+}
