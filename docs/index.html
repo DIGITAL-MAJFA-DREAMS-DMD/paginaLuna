@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Meseros Luna - Excelencia y Banquetes para tus Eventos</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%230A0A0C' stroke='%23D4AF37' stroke-width='1.5'/%3E%3Cpath d='M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4C12.92 3.04 12.46 3 12 3z' fill='%23D4AF37'/%3E%3Cpath d='M11 16l2.5 1.5L16 16l-1.5-2.5L16 11l-2.5 1.5L11 11l1.5 2.5z' fill='%23E5C158'/%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS Externos -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF9E6',
+                            300: '#F3E5AB',
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                            700: '#856404'
+                        },
+                        dark: {
+                            base: '#0A0A0C',
+                            card: '#141418',
+                            accent: '#1D1D24',
+                            border: '#2A2A36'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-base text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- BARRA DE NAVEGACIÓN FIJA (NAVBAR) -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-gold-500/20 px-4 lg:px-8 py-3 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-11 h-11 rounded-full bg-dark-accent border border-gold-500/40 flex items-center justify-center shadow-lg group-hover:border-gold-500 transition-colors">
+                    <svg class="w-7 h-7 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4C12.92 3.04 12.46 3 12 3z" fill="currentColor" fill-opacity="0.15"/>
+                        <path d="M11 16l2.5 1.5L16 16l-1.5-2.5L16 11l-2.5 1.5L11 11l1.5 2.5z" class="text-gold-400" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-serif text-lg lg:text-xl font-bold tracking-wider block gold-gradient-text">MESEROS LUNA</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gray-400 block -mt-1">Servicios & Banquete</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#cobertura" class="hover:text-gold-400 transition-colors">Cobertura</a>
+                <a href="#servicios" class="hover:text-gold-400 transition-colors">Servicios</a>
+                <a href="#equipo" class="hover:text-gold-400 transition-colors">Nuestro Equipo</a>
+                <a href="#banquetes" class="hover:text-gold-400 transition-colors">Pollo en Barbacoa</a>
+                <a href="#cotizador" class="hover:text-gold-400 transition-colors">Cotizador</a>
+                <a href="#contacto" class="hover:text-gold-400 transition-colors">Contacto</a>
+                
+                <div class="flex items-center gap-2 pl-2">
+                    <a href="https://www.facebook.com/share/1HCR5SZ4Xp/?mibextid=wwXIfr" 
+                       target="_blank" 
+                       aria-label="Facebook Oficial"
+                       class="w-8 h-8 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-facebook-f text-xs"></i>
+                    </a>
+                    <a href="https://www.instagram.com/meseros_luna_ixtlahuaca?stkn=OWk1MnA1cDlieDIw&utm_source=qr" 
+                       target="_blank" 
+                       aria-label="Instagram Oficial"
+                       class="w-8 h-8 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 text-pink-400 hover:text-white flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-instagram text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/527621068212?text=Hola%20Servicio%20de%20Meseros%20Luna,%20me%20gustaría%20solicitar%20información%20para%20un%20evento." 
+                   target="_blank" 
+                   class="gold-gradient-bg text-black font-semibold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full hover:brightness-110 transition-all flex items-center gap-2 shadow-lg shadow-gold-500/10">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>762 106 8212</span>
+                </a>
+            </div>
+
+            <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-gold-400 p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full glass-card border-b border-gold-500/20 py-5 px-6 flex-col space-y-4">
+            <a href="#cobertura" class="mobile-link text-gray-200 hover:text-gold-400">Zona de Cobertura</a>
+            <a href="#servicios" class="mobile-link text-gray-200 hover:text-gold-400">Servicios</a>
+            <a href="#equipo" class="mobile-link text-gray-200 hover:text-gold-400">Nuestro Equipo</a>
+            <a href="#banquetes" class="mobile-link text-gray-200 hover:text-gold-400">Pollo en Barbacoa</a>
+            <a href="#cotizador" class="mobile-link text-gray-200 hover:text-gold-400">Cotizador Dinámico</a>
+            <a href="#contacto" class="mobile-link text-gray-200 hover:text-gold-400">Contacto Directo</a>
+            
+            <div class="grid grid-cols-2 gap-2 pt-2">
+                <a href="https://www.facebook.com/share/1HCR5SZ4Xp/?mibextid=wwXIfr" target="_blank" class="bg-blue-600 text-white font-bold text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/meseros_luna_ixtlahuaca?stkn=OWk1MnA1cDlieDIw&utm_source=qr" target="_blank" class="bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white font-bold text-xs text-center py-2.5 rounded-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <a href="https://wa.me/527621068212" target="_blank" class="gold-gradient-bg text-black font-bold text-center py-2.5 rounded-lg flex items-center justify-center gap-2 text-xs">
+                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: 762 106 8212
+            </a>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden flex items-center justify-center min-h-[85vh]">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-500/10 via-dark-base to-dark-base opacity-70"></div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 text-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-300 text-xs md:text-sm font-medium mb-6 backdrop-blur-md">
+                <i class="fa-solid fa-location-dot text-gold-400 text-xs"></i>
+                <span>Cobertura en Ixtlahuaca y Zonas Conurbadas</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Servicio de Meseros <br/>
+                <span class="gold-gradient-text">LUNA</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-300 italic font-serif max-w-3xl mx-auto mb-6 leading-relaxed font-light">
+                "Disfruta tu evento, de tus invitados nos encargamos nosotros."
+            </p>
+
+            <p class="text-sm md:text-base text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Atención profesional de meseros y banquetes en el municipio de <strong class="text-gold-300 font-semibold">Ixtlahuaca</strong> y sus comunidades circunvecinas, incluyendo <strong class="text-gray-200">Santa Ana la Ladera</strong>, <strong class="text-gray-200">Santa Cruz Tepexpan</strong>, <strong class="text-gray-200">Jocotitlán</strong> y poblados cercanos.
+            </p>
+
+            <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-5">
+                <a href="#cotizador" class="w-full sm:w-auto gold-gradient-bg text-black font-bold text-sm sm:text-base px-6 py-3.5 rounded-full hover:scale-105 transition-all shadow-xl shadow-gold-500/20 flex items-center justify-center gap-2.5">
+                    <i class="fa-solid fa-calculator text-base"></i>
+                    <span>Cotizar Evento</span>
+                </a>
+                <a href="https://www.facebook.com/share/1HCR5SZ4Xp/?mibextid=wwXIfr" 
+                   target="_blank" 
+                   class="w-full sm:w-auto bg-blue-600/90 hover:bg-blue-600 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full hover:scale-105 transition-all flex items-center justify-center gap-2.5 border border-blue-400/40 shadow-lg shadow-blue-600/20">
+                    <i class="fa-brands fa-facebook-f text-base"></i>
+                    <span>Visitar Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/meseros_luna_ixtlahuaca?stkn=OWk1MnA1cDlieDIw&utm_source=qr" 
+                   target="_blank" 
+                   class="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:opacity-95 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full hover:scale-105 transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-rose-500/20">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                    <span>Visitar Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE COBERTURA REGIONAL -->
+    <section id="cobertura" class="py-12 bg-dark-card/50 border-y border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block mb-2">Presencia Regional</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-bold text-white mb-6">Cobertura Profesional de Servicio</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="glass-card p-4 rounded-xl border border-gold-500/20">
+                    <i class="fa-solid fa-location-dot text-gold-400 text-lg mb-2"></i>
+                    <h3 class="font-serif font-bold text-white text-sm">Ixtlahuaca</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Cabecera y comunidades</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl border border-gold-500/20">
+                    <i class="fa-solid fa-map-pin text-gold-400 text-lg mb-2"></i>
+                    <h3 class="font-serif font-bold text-white text-sm">Santa Ana la Ladera</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Atención a eventos</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl border border-gold-500/20">
+                    <i class="fa-solid fa-map-pin text-gold-400 text-lg mb-2"></i>
+                    <h3 class="font-serif font-bold text-white text-sm">Santa Cruz Tepexpan</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Servicio completo</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl border border-gold-500/20">
+                    <i class="fa-solid fa-building-flag text-gold-400 text-lg mb-2"></i>
+                    <h3 class="font-serif font-bold text-white text-sm">Jocotitlán</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Y zonas aledañas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: SERVICIOS INTEGRALES -->
+    <section id="servicios" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block mb-2">Servicios Integrales</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">Atención Profesional para tu Fiesta</h2>
+            <div class="w-20 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div class="glass-card glass-card-hover rounded-2xl p-6 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                    <i class="fa-solid fa-tray"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Atención a Mesas</h3>
+                <p class="text-gray-400 text-xs">Servicio continuo de alimentos, aperitivos y bebidas para cada comensal.</p>
+            </div>
+
+            <div class="glass-card glass-card-hover rounded-2xl p-6 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                    <i class="fa-solid fa-broom"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Limpieza de Mesas</h3>
+                <p class="text-gray-400 text-xs">Retiro de loza y mantenimiento impecable del espacio durante la fiesta.</p>
+            </div>
+
+            <div class="glass-card glass-card-hover rounded-2xl p-6 transition-all duration-300 border-gold-500/40">
+                <div class="w-12 h-12 rounded-xl bg-gold-500/20 border border-gold-500/50 flex items-center justify-center text-gold-400 text-xl mb-4">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Pollo en Barbacoa</h3>
+                <p class="text-gray-400 text-xs">Banquete tradicional preparado a $80 por pollo listo para servir a tus invitados.</p>
+            </div>
+
+            <div class="glass-card glass-card-hover rounded-2xl p-6 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                    <i class="fa-solid fa-wine-glass"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Bebidas e Hielos</h3>
+                <p class="text-gray-400 text-xs">Servido para brindis, atención de hieleras y reabastecimiento constante.</p>
+            </div>
+
+            <div class="glass-card glass-card-hover rounded-2xl p-6 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Presentación Elegante</h3>
+                <p class="text-gray-400 text-xs">Personal joven con delantal formal e imagen limpia y profesional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: NUESTRO EQUIPO EN ACCIÓN -->
+    <section id="equipo" class="py-20 bg-dark-card/40 border-y border-gold-500/10 relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14">
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block mb-2">Compromiso y Presentación</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">Nuestro Equipo en Acción</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-3 text-sm md:text-base">
+                    Personal joven, capacitado y debidamente uniformado con delantal corporativo para darle la máxima distinción a tu celebración.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 glass-card p-3 sm:p-4 rounded-2xl border border-gold-500/30 relative group shadow-2xl">
+                    <div class="relative rounded-xl overflow-hidden border border-gold-500/20">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" 
+                             alt="Equipo de Meseros Luna Uniformados" 
+                             class="w-full h-[320px] sm:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-left">
+                            <span class="bg-gold-500/20 border border-gold-500/40 text-gold-300 text-xs px-3 py-1 rounded-full backdrop-blur-md inline-block mb-2">
+                                <i class="fa-solid fa-shirt mr-1"></i> Uniforme Oficial
+                            </span>
+                            <h3 class="text-lg font-serif font-bold text-white">Servicio Personalizado de Alta Calidad</h3>
+                            <p class="text-xs text-gray-300">Atención profesional en Ixtlahuaca, Santa Ana la Ladera, Santa Cruz Tepexpan, Jocotitlán y poblados cercanos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="glass-card p-5 rounded-xl border border-gold-500/20 flex gap-4 items-start">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl shrink-0">
+                            <i class="fa-solid fa-vest-patches"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-white text-base">Identidad y Uniformidad</h4>
+                            <p class="text-xs text-gray-400 mt-1">Delantales negros oficiales grabados con la marca para mantener un aspecto ordenado y elegante.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-xl border border-gold-500/20 flex gap-4 items-start">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl shrink-0">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-white text-base">Trato Amable y Rápido</h4>
+                            <p class="text-xs text-gray-400 mt-1">Coordinación eficiente para servir alimentos, bebidas y mantener cada mesa limpia durante todo el festejo.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-5 rounded-xl border border-gold-500/20 flex gap-4 items-start">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-white text-base">Disponibilidad Garantizada</h4>
+                            <p class="text-xs text-gray-400 mt-1">Llegada puntual previa al inicio del evento para montaje y preparación de mesas en toda la zona regional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: BANQUETES (POLLO EN BARBACOA) -->
+    <section id="banquetes" class="py-20 bg-gradient-to-b from-dark-base via-dark-card/60 to-dark-base relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="glass-card rounded-3xl p-8 md:p-12 border border-gold-500/30 relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/20 border border-gold-500/40 text-gold-300 text-xs font-semibold">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Complemento Perfecto para tus Fiestas</span>
+                        </div>
+                        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white leading-tight">
+                            Pollo en Barbacoa <br/>
+                            <span class="gold-gradient-text">Tradicional y Delicioso</span>
+                        </h2>
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                            ¿Buscas el platillo ideal para tus banquetes? Además del servicio de meseros, consentimos a tus invitados con nuestro riquísimo <strong>Pollo en Barbacoa</strong> preparado artesanalmente con sazón único.
+                        </p>
+
+                        <div class="flex items-center gap-4 py-2">
+                            <div class="bg-dark-base border border-gold-500/40 rounded-2xl p-4 text-center">
+                                <span class="text-xs uppercase text-gray-400 font-semibold block">Precio Especial</span>
+                                <span class="font-serif text-3xl font-extrabold gold-gradient-text">$80 MXN</span>
+                                <span class="text-xs text-gray-400 block mt-1">por pollo</span>
+                            </div>
+                            <div class="text-xs text-gray-300 space-y-1">
+                                <p><i class="fa-solid fa-circle-check text-gold-400 mr-1.5"></i> Sazón casera para banquetes</p>
+                                <p><i class="fa-solid fa-circle-check text-gold-400 mr-1.5"></i> Listo para servirse caliente</p>
+                                <p><i class="fa-solid fa-circle-check text-gold-400 mr-1.5"></i> Ideal para acompañar tus eventos</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="#cotizador" class="inline-flex items-center gap-2 gold-gradient-bg text-black font-bold px-6 py-3.5 rounded-xl hover:brightness-110 transition-all text-sm shadow-lg">
+                                <i class="fa-solid fa-drumstick-bite"></i>
+                                <span>Agregar Pollos a tu Cotización</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-2xl overflow-hidden border border-gold-500/30 shadow-2xl group">
+                            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Pollo en Barbacoa para banquetes" 
+                                 class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-center">
+                                <span class="text-xs text-gold-300 font-serif font-bold uppercase tracking-widest">Sazón Garantizada • $80 c/u</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: COTIZADOR DINÁMICO DE EVENTOS -->
+    <section id="cotizador" class="py-20 bg-dark-base relative">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block mb-2">Presupuesto Rápido</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">Calculadora Dinámica de Eventos</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-3 text-sm md:text-base">
+                    Calcula los meseros requeridos según la cantidad de mesas (1 mesero cada 3 mesas) y añade opcionalmente la barbacoa para tu evento en Ixtlahuaca y sus comunidades circundantes.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto shadow-2xl relative overflow-hidden border border-gold-500/30">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-5">
+                        <div class="p-4 bg-gold-500/5 rounded-xl border border-gold-500/20 space-y-4">
+                            <span class="text-xs uppercase font-bold text-gold-400 tracking-wider block">1. Cotización de Meseros</span>
+                            
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">
+                                    <i class="fa-solid fa-utensils text-gold-400 mr-1.5"></i> Número de Mesas
+                                </label>
+                                <input type="number" id="inputMesas" min="1" max="150" value="12" 
+                                       class="w-full bg-dark-base border border-gray-700 focus:border-gold-500 text-white rounded-xl px-4 py-3 outline-none transition-colors text-lg font-bold">
+                                <span class="text-[11px] text-gray-400 mt-1 block">Rango estándar: 1 mesero atiende 3 mesas.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">
+                                    <i class="fa-solid fa-cake-candles text-gold-400 mr-1.5"></i> Tipo de Evento
+                                </label>
+                                <select id="selectEvento" class="w-full bg-dark-base border border-gray-700 focus:border-gold-500 text-white rounded-xl px-4 py-3 outline-none transition-colors text-sm">
+                                    <option value="Boda">Boda</option>
+                                    <option value="XV Años">XV Años</option>
+                                    <option value="Posada">Posada / Fiesta Navideña</option>
+                                    <option value="Evento Social">Evento Social / Familiar</option>
+                                    <option value="Graduación">Graduación</option>
+                                    <option value="Empresarial">Evento Empresarial</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">
+                                    <i class="fa-solid fa-location-dot text-gold-400 mr-1.5"></i> Ubicación del Evento
+                                </label>
+                                <input type="text" id="inputUbicacion" placeholder="Ej: Santa Ana la Ladera, Santa Cruz Tepexpan, Jocotitlán o Ixtlahuaca" 
+                                       class="w-full bg-dark-base border border-gray-700 focus:border-gold-500 text-white rounded-xl px-4 py-2.5 outline-none transition-colors text-xs">
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-gold-500/5 rounded-xl border border-gold-500/20 space-y-3">
+                            <span class="text-xs uppercase font-bold text-gold-400 tracking-wider block">2. Cotización de Banquetes (Opcional)</span>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">
+                                    <i class="fa-solid fa-drumstick-bite text-gold-400 mr-1.5"></i> Pollo en Barbacoa ($80 MXN c/u)
+                                </label>
+                                <input type="number" id="inputPollos" min="0" max="200" value="0" placeholder="Cantidad de pollos"
+                                       class="w-full bg-dark-base border border-gray-700 focus:border-gold-500 text-white rounded-xl px-4 py-2.5 outline-none transition-colors text-base font-bold">
+                                <span class="text-[11px] text-gray-400 mt-1 block">Escribe 0 si solo deseas contratar meseros.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-base/80 rounded-xl p-6 border border-gold-500/20 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase text-gray-400 font-semibold block mb-1">Meseros Recomendados</span>
+                            <div class="flex items-baseline gap-2 mb-4">
+                                <span id="resultadoMeseros" class="font-serif text-5xl font-extrabold gold-gradient-text">4</span>
+                                <span class="text-gray-300 font-medium text-sm">Mesero(s)</span>
+                            </div>
+
+                            <div id="boxPolloSubtotal" class="hidden mb-4 p-3 bg-gold-500/10 border border-gold-500/30 rounded-xl">
+                                <div class="flex justify-between items-center text-xs">
+                                    <span class="text-gray-300 font-semibold"><i class="fa-solid fa-drumstick-bite text-gold-400 mr-1"></i> Banquete de Pollo:</span>
+                                    <span id="txtPolloResumen" class="text-gold-400 font-bold">0 pollos = $0 MXN</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2.5 text-xs text-gray-300 border-t border-gray-800 pt-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Proporción:</span>
+                                    <span class="font-medium text-white">1 mesero por cada 3 mesas</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Presupuesto final:</span>
+                                    <span class="font-medium text-gold-400">Privado por WhatsApp</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Teléfono Directo:</span>
+                                    <span class="font-medium text-white">762 106 8212</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button id="btnCotizarWhatsApp" class="w-full gold-gradient-bg text-black font-bold py-3.5 px-4 rounded-xl hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-gold-500/10 text-xs sm:text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Enviar Cotización por WhatsApp</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <section id="contacto" class="py-20 bg-dark-card/60 border-t border-gold-500/20">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-14">
+                <span class="text-gold-500 text-xs font-bold uppercase tracking-widest block mb-2">Contacto Directo</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">Escríbenos o Visítanos</h2>
+                <p class="text-gray-400 max-w-xl mx-auto mt-2 text-sm">
+                    Escanea el código QR oficial de WhatsApp Business o conéctate con nuestras redes oficiales para cotizar tu evento en Ixtlahuaca y sus comunidades circundantes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+                <div class="glass-card rounded-2xl p-8 text-center border border-gold-500/30 flex flex-col items-center">
+                    <span class="text-xs uppercase font-bold text-gold-400 tracking-wider mb-4">Código QR WhatsApp Business</span>
+                    
+                    <div class="bg-white p-4 rounded-2xl shadow-2xl mb-4 inline-block">
+                        <img id="qrImage" 
+                             src="qr-whatsapp.jpeg" 
+                             onerror="this.onerror=null; this.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://wa.me/527621068212?text=Hola%20Servicio%20de%20Meseros%20Luna,%20me%20gustaría%20cotizar%20un%20evento.';"
+                             alt="WhatsApp QR Code Meseros Luna 7621068212" 
+                             class="w-48 h-48 object-contain">
+                    </div>
+
+                    <a href="https://wa.me/527621068212" target="_blank" class="gold-gradient-bg text-black font-bold text-xs uppercase px-6 py-3 rounded-full hover:brightness-110 transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Abrir Chat con 762 106 8212</span>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl border border-gold-500/30 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold text-gold-400 uppercase tracking-widest block mb-1">Contacto Oficial</span>
+                        <h3 class="font-serif text-3xl font-extrabold text-white">762 106 8212</h3>
+                        <p class="text-xs text-gray-400 mt-1">Atención rápida por WhatsApp o llamada para agendar fechas en Ixtlahuaca y zonas aledañas.</p>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="https://www.facebook.com/share/1HCR5SZ4Xp/?mibextid=wwXIfr" 
+                               target="_blank" 
+                               class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-3 rounded-xl transition-all flex items-center justify-center gap-2 text-xs shadow-lg shadow-blue-600/20">
+                                <i class="fa-brands fa-facebook text-base"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/meseros_luna_ixtlahuaca?stkn=OWk1MnA1cDlieDIw&utm_source=qr" 
+                               target="_blank" 
+                               class="bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 hover:opacity-90 text-white font-bold py-3 px-3 rounded-xl transition-all flex items-center justify-center gap-2 text-xs shadow-lg">
+                                <i class="fa-brands fa-instagram text-base"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+
+                        <a href="https://wa.me/527621068212?text=Hola,%20quisiera%20pedir%20información%20para%20un%20evento" 
+                           target="_blank" 
+                           class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Enviar Mensaje a WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-black py-10 border-t border-gray-900 text-center text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <span class="font-serif text-lg font-bold gold-gradient-text block">SERVICIO DE MESEROS LUNA</span>
+            <p class="italic font-serif">"Disfruta tu evento, de tus invitados nos encargamos nosotros."</p>
+            <p class="text-[11px] text-gray-400">Cobertura en Ixtlahuaca • Santa Ana la Ladera • Santa Cruz Tepexpan • Jocotitlán y comunidades cercanas</p>
+            
+            <div class="flex items-center justify-center gap-6 py-2">
+                <a href="https://www.facebook.com/share/1HCR5SZ4Xp/?mibextid=wwXIfr" target="_blank" class="text-gray-400 hover:text-blue-400 text-xl transition-colors">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/meseros_luna_ixtlahuaca?stkn=OWk1MnA1cDlieDIw&utm_source=qr" target="_blank" class="text-gray-400 hover:text-pink-400 text-xl transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/527621068212" target="_blank" class="text-gray-400 hover:text-green-400 text-xl transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <p class="text-gray-400">Teléfono Directo: <strong>762 106 8212</strong></p>
+            <p class="text-gray-500 text-[11px] pt-2">© 2026 Servicio de Meseros Luna. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- LÓGICA DE JAVASCRIPT EXTERNA -->
+    <script src="script.js"></script>
+</body>
+</html>
